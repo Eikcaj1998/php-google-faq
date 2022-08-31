@@ -90,13 +90,18 @@
 </head>
 <body>
     <header>
-        <ul>
-            <?php for( $i = 0; $i < count($navbar); $i++) : ?>
-                <li>
-                    <?php echo $navbar[$i]?>
-                </li>
-            <?php endfor ?>
-        </ul>
+        <div class="container-fluid d-flex px-4">
+            <img alt="Google" class="img-fluid" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png" 
+            srcset="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_74x24dp.png 2x" data-iml="562.5" 
+            data-atf="false">
+            <ul class="d-flex">
+                <?php for( $i = 0; $i < count($navbar); $i++) : ?>
+                    <li>
+                        <?php echo $navbar[$i]?>
+                    </li>
+                <?php endfor ?>
+            </ul>
+        </div>
     </header>
     <main>
         <div class="container">
@@ -112,20 +117,25 @@
         </div>
     </main>    
     <footer>
-        <ul class="d-flex">
-            <?php for ($i = 0; $i < count($google); $i++) : ?>
-                <li>
-                    <?php echo $google[$i]; ?>
-                </li>
-            <?php endfor ?>
-        </ul>
-            <select name="language" id="language">
-                <?php for( $j = 0; $j < count($languages) ; $j++) : ?>
-                    <option value="choice">
-                        <?php echo $languages[$j]; ?>
-                    </option>
-                <?php endfor ?>
-            </select>
+        <div class="container">
+               <div class="d-flex justify-content-between">
+                <ul class="d-flex">
+                    <?php for ($i = 0; $i < count($google); $i++) : ?>
+                        <li>
+                            <?php echo $google[$i]; ?>
+                        </li>
+                    <?php endfor ?>
+                </ul>
+                <select name="language" id="language">
+                        <?php for( $j = 0; $j < count($languages) ; $j++) : ?>
+                            <option value="languageOfChoice">
+                                <?php echo $languages[$j]; ?>
+                            </option>
+                        <?php endfor ?>
+                </select>
+                
+                    </div>
+        </div>
     </footer>
 </body>
 </html>
