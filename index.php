@@ -62,6 +62,7 @@
       'English',
       'Espanol',
       'Français',
+      'italiano',
       'Português',
       '中文',
       '日本語',
@@ -103,7 +104,13 @@
         </div>
     </main>    
     <footer>
-
+            <select name="language" id="language">
+                <?php for( $j = 0; $j < count($languages) ; $j++) : ?>
+                    <option value="choice">
+                        <?php echo $languages[$j]; ?>
+                    </option>
+                <?php endfor ?>
+            </select>
     </footer>
 </body>
 </html>
