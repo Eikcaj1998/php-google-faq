@@ -68,6 +68,13 @@
       '日本語',
       '한국어',
     ];
+    $google = [
+        'Google',
+        'Tutto su Google',
+        'Privacy',
+        'Termini',
+    ];
+
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -104,6 +111,13 @@
         </div>
     </main>    
     <footer>
+        <ul class="d-flex">
+            <?php for ($i = 0; $i < count($google); $i++) : ?>
+                <li>
+                    <?php echo $google[$i]; ?>
+                </li>
+            <?php endfor ?>
+        </ul>
             <select name="language" id="language">
                 <?php for( $j = 0; $j < count($languages) ; $j++) : ?>
                     <option value="choice">
