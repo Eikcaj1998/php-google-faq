@@ -1,5 +1,12 @@
 <?php
-    $faq = [
+    $navbar = [
+        'Introduzione',
+        'Norme sulla privacy',
+        'Termini di servizio',
+        'Tecnologie',
+        'Domande frequenti',
+    ];
+    $faqs = [
         [
             'question' => "Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?",
             'answer' => "La recente <a href='#'>decisione della Corte di giustizia dell'Unione europea</a> decisione della Corte di giustizia dell'Unione europea ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.
@@ -51,6 +58,15 @@
         ],
 
     ];
+    $languages = [
+      'English',
+      'Espanol',
+      'Français',
+      'Português',
+      '中文',
+      '日本語',
+      '한국어',
+    ];
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,11 +80,25 @@
     <title>Document</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <ul>
+            <?php for( $i = 0; $i < count($navbar); $i++) : ?>
+                <li>
+                    <?php echo $navbar[$i]?>
+                </li>
+            <?php endfor ?>
+        </ul>
+    </header>
     <main>
         <div class="container">
-
-
+        <?php foreach( $faqs as $faq):?>
+            <h3>
+                <?php  echo $faq['question']; ?>
+            </h3>
+            <p>
+            <?php  echo $faq['answer']; ?>
+            </p>
+        <?php endforeach ?>
 
         </div>
     </main>    
