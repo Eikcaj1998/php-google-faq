@@ -1,0 +1,33 @@
+ul, ol {
+    margin: 0 0 0 16px;
+    padding: 0;
+}
+ul{
+    list-style-type:none ;
+}
+li{
+    line-height: 1.714;
+    padding-left: 16px;
+    padding-top: 12px;
+}
+h2{
+    color: #3c4043;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.333;
+    margin: 0;
+    padding: 64px 0 0 0;
+}
+h3 {
+    color: #3c4043;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.444;
+    margin: 0;
+    padding: 52px 0 0 0;
+}
+p{
+    margin: 10px 0;
+    line-height: 1.714;
+    padding-top: 20px;
+}
